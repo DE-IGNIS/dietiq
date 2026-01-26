@@ -14,8 +14,11 @@
   font-size: 0.9rem;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Sans Unicode";
   margin-bottom: 0;
-  transition: transform 0.25s ease-out;
   border-radius: 7px;
+  transition:
+    transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.35s ease,
+    background 0.35s ease;
 }
 .card h2 {
   text-align: center;
@@ -25,19 +28,12 @@
 }
 .card:hover {
   cursor: pointer;
-  transform: translateY(-8px);
-  background-color: aquamarine;
-}
-.feature-link {
-  text-decoration: none;
-  color: #b25cef;
+  transform: translateY(-6px);
+  background: #e6dc23;
+  box-shadow: 0 8px 20px rgba(243, 17, 17, 0.82);
 }
 
-/* earlier tried flex but grid proved to be better */
-/* .container {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-evenly;
-      padding: 10px 14px;
-      border-radius: 10px;
-    } */
+.feature-link {
+  text-decoration: none;
+  color: #ef5cd9;
+}
