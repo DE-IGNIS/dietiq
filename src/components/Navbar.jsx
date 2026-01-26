@@ -8,12 +8,15 @@ function Navbar() {
       <div className="main-container">
         <NavLink to="/" className="nav-logo">
           <img className="logo" width="50" height="50" src={logo} alt="Logo" />
-          <p>DietIQ</p>
+          <p className="logo-text">DietIQ</p>
         </NavLink>
 
         <nav className="navbar">
           <NavLink className="nav-link" to="/home">
             Home
+          </NavLink>
+          <NavLink className="nav-link" to="/">
+            Communities
           </NavLink>
           <NavLink className="nav-link" to="/content">
             Content
@@ -21,10 +24,7 @@ function Navbar() {
           <NavLink className="nav-link" to="/about">
             About
           </NavLink>
-          <NavLink className="nav-link" to="/">
-            Contact
-          </NavLink>
-          <NavLink className="nav-link" to="/join">
+          <NavLink className="nav-link-join" to="/join">
             Join
           </NavLink>
         </nav>
