@@ -1,7 +1,21 @@
 import { useEffect, useState } from "react";
 import "./styling/Macros.css";
+import DietPDF from "./DietPdf";
+import { pdf, PDFDownloadLink } from "@react-pdf/renderer";
+import { saveAs } from "file-saver";
+
+const handleDownload = async () => {
+  try {
+    const blob = await pdf(<DietPDF />).toBlob();
+    saveAs(blob, "diet-plan.pdf");
+  } catch (err) {
+    console.error("PDF generation failed", err);
+    alert("Could not generate PDF");
+  }
+};
 
 function Macros({ formData }) {
+  const [promptResponses, setpromptResponses] = useState([]);
   // RMR or BMR
   const [maleRMR, setMaleRMR] = useState(0.0);
   const [femaleRMR, setFemaleRMR] = useState(0.0);
@@ -41,31 +55,50 @@ function Macros({ formData }) {
     formData.activity,
   ]);
 
-  const protein_g = formData.weight * 2;
+  const protein_g = formData.weight * 0.8;
   const fat_g = (tdee * 0.25) / 9;
   const carb_g = (tdee - protein_g * 4 - fat_g * 9) / 4;
 
   return (
     <>
-      <div>
+      <div className="macros-container">
         <h1>Your Suggested Macros</h1>
-        {formData.gender === "male" ? (
-          <>
-            <p>Calories : {Number(tdee).toFixed(2)} kcal</p>
-            <p>Protein : {Number(protein_g).toFixed(2)} g</p>
-            <p>Carbohydrates : {Number(carb_g).toFixed(2)} g</p>
-            <p>Fats : {Number(fat_g).toFixed(2)} g</p>
-          </>
-        ) : (
-          <>
-            <p>Calories : {Number(tdee).toFixed(2)} kcal</p>
-            <p>Protein : {Number(protein_g).toFixed(2)} g</p>
-            <p>Carbohydrates : {Number(carb_g).toFixed(2)} g</p>
-            <p>Fats : {Number(fat_g).toFixed(2)} g</p>
-          </>
-        )}
-        <button>Get My Diet Plan    </button>
+
+        <div className="macro-grid">
+          <div className="macro-item">
+            <span className="macro-label">Calories</span>
+            <span className="macro-value">{tdee.toFixed(2)} kcal</span>
+          </div>
+
+          <div className="macro-item">
+            <span className="macro-label">Protein</span>
+            <span className="macro-value">{protein_g.toFixed(2)} g</span>
+          </div>
+
+          <div className="macro-item">
+            <span className="macro-label">Carbohydrates</span>
+            <span className="macro-value">{carb_g.toFixed(2)} g</span>
+          </div>
+
+          <div className="macro-item">
+            <span className="macro-label">Fats</span>
+            <span className="macro-value">{fat_g.toFixed(2)} g</span>
+          </div>
+        </div>
+
+        <button className="download-btn" onClick={handleDownload}>
+          Get a meal planner (PDF)
+        </button>
       </div>
+
+      {/* I can do this or the above would do  */}
+      {/* <PDFDownloadLink document={<DietPDF />} fileName="diet-plan.pdf">
+          {({ loading }) => (
+            <button disabled={loading}>
+              {loading ? "Generating pdf..." : "Download PDF"}
+            </button>
+          )}
+        </PDFDownloadLink> */}
     </>
   );
 }
