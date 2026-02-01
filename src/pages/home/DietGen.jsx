@@ -1,8 +1,8 @@
 import { useState } from "react";
-import "./styling/Feature4.css";
+import "./styling/DietGen.css";
 import Macros from "../../components/Macros";
 
-function Feature4() {
+function DietGen() {
   const [formData, setFormData] = useState({
     height: "",
     weight: "",
@@ -182,4 +182,4 @@ function Feature4() {
   );
 }
 
-export default Feature4;
+export default DietGen;

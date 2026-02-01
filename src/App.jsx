@@ -4,9 +4,8 @@ import Home from "./pages/home/Home";
 import Content from "./pages/Content";
 import About from "./pages/About";
 import Landing from "./pages/Landing";
-
 import Join from "./pages/Join";
-import { Feature1, Feature2, Feature3, Feature4 } from "./pages/home";
+import { DietGen, Feature1, Feature2, Trivia } from "./pages/home";
 import Layout from "./layouts/Layout";
 
 function App() {
@@ -27,10 +26,10 @@ function App() {
           <Route path="/home/feature2" element={<Feature2 />} />
 
           {/* Home - feature 3 Page route  */}
-          <Route path="/home/feature3" element={<Feature3 />} />
+          <Route path="/home/trivia" element={<Trivia />} />
 
           {/* Home - feature 4 Page route  */}
-          <Route path="/home/feature4" element={<Feature4 />} />
+          <Route path="/home/dietgen" element={<DietGen />} />
 
           {/* Content Page route  */}
           <Route path="/content" element={<Content />} />

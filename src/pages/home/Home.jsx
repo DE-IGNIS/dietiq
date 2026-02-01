@@ -50,14 +50,14 @@ function Home() {
           </div>
 
           <div className="card">
-            <Link className="feature-link" to="feature3">
+            <Link className="feature-link" to="trivia">
               <h2>Multilingual Support</h2>
               <p>Access guidance in your preferred language.</p>
             </Link>
           </div>
 
           <div className="card">
-            <Link className="feature-link" to="feature4">
+            <Link className="feature-link" to="dietgen">
               <h2>Community Insights</h2>
               <p>Learn from local community experiences.</p>
             </Link>
