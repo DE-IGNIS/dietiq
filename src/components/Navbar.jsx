@@ -15,11 +15,11 @@ function Navbar() {
           <NavLink className="nav-link" to="/home">
             Home
           </NavLink>
-          <NavLink className="nav-link" to="/">
-            Communities
-          </NavLink>
           <NavLink className="nav-link" to="/content">
             Content
+          </NavLink>
+          <NavLink className="nav-link" to="/">
+            FAQ's
           </NavLink>
           <NavLink className="nav-link" to="/about">
             About

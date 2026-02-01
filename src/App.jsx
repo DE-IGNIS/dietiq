@@ -4,8 +4,7 @@ import Home from "./pages/home/Home";
 import Content from "./pages/Content";
 import About from "./pages/About";
 import Landing from "./pages/Landing";
-// unused import may need in future
-// import Navbar from "./components/Navbar";
+
 import Join from "./pages/Join";
 import { Feature1, Feature2, Feature3, Feature4 } from "./pages/home";
 import Layout from "./layouts/Layout";
@@ -13,8 +12,6 @@ import Layout from "./layouts/Layout";
 function App() {
   return (
     <>
-    {/* unused navbar may need in future */}
-      {/* <Navbar /> */}
       <Routes>
         <Route element={<Layout />}>
           {/* Landing Page route  */}
