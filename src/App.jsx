@@ -5,7 +5,7 @@ import Content from "./pages/Content";
 import About from "./pages/About";
 import Landing from "./pages/Landing";
 import Join from "./pages/Join";
-import { DietGen, Feature1, Feature2, Trivia } from "./pages/home";
+import { DietGen, Chat, Feature2, Trivia } from "./pages/home";
 import Layout from "./layouts/Layout";
 
 function App() {
@@ -20,7 +20,7 @@ function App() {
           <Route path="/home" element={<Home />} />
 
           {/* Home - feature 1  Page route  */}
-          <Route path="/home/feature1" element={<Feature1 />} />
+          <Route path="/home/chat" element={<Chat />} />
 
           {/* Home - feature 2 Page route  */}
           <Route path="/home/feature2" element={<Feature2 />} />

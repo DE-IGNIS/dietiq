@@ -36,7 +36,7 @@ function Home() {
         <div className="container">
 
           <div className="card">
-            <Link className="feature-link" to="feature1">
+            <Link className="feature-link" to="chat">
               <h2>AI Health Assistant</h2>
               <p>Instant health guidance powered by AI.</p>
             </Link>
