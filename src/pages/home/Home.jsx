@@ -42,8 +42,8 @@ function Home() {
 
           <div className="card">
             <Link className="feature-link" to="heatmap">
-              <h2>Disease Outbreak HeatMap</h2>
-              <p>Disease Outbreak ke bare me likhna hai.</p>
+              <h2>Disease HeatMap</h2>
+              <p>An AI system that analyzes community health conversations to detect early signs of regional disease outbreak.An displays an interactive map for more info</p>
             </Link>
           </div>
 
