@@ -7,7 +7,7 @@ import cholera from "../assets/images/cholera.jpg";
 import cold from "../assets/images/common-cold.jpeg";
 import conjunctivitis from "../assets/images/conjunctivitis.jpg";
 import covid19 from "../assets/images/covid19.jpg";
-// import dengue from "../assets/images/dengue.jpg";
+import dengue from "../assets/images/dengue.jpg";
 import diabetes from "../assets/images/diabetes.jpeg";
 import diarrheal from "../assets/images/diarrheal-diseases.jpeg";
 import gastritis from "../assets/images/gastritis.jpg";
