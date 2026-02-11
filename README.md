@@ -1,40 +1,65 @@
-# HealthIQ - AI-Powered Virtual Rehabilitation Assistant
+# HealthIQ - AI-Powered Health Information and Community Platform
 
-A premium Progressive Web Application (PWA) for remote physical therapy using state-of-the-art AI-powered pose detection and real-time clinical monitoring.
+A comprehensive health platform that combines artificial intelligence with community-driven insights to provide accessible, multilingual health guidance for diverse communities.
 
 ## 🎯 Project Overview
 
-Gati is a sophisticated rehabilitation platform that transforms smartphone cameras into clinical-grade assessment tools. Using MediaPipe AI, it provides real-time biomechanical feedback, range-of-motion (ROM) tracking, and form quality scoring.
+HealthIQ is a sophisticated health information platform that addresses the gap in accessible health guidance for semi-urban and rural communities. It combines AI intelligence with community knowledge to provide reliable health and nutrition information, disease education, and personalized diet planning.
 
-**Live Project**: `https://gati.web.app/` (Production environment)
+**Live Project**: `https://dietiq.vercel.app/` (Production environment)
 
 ## 🚀 Tech Stack
 
-- **Frontend**: React.js + Vite (High-performance rendering)
-- **Routing**: Centralized Route Configuration (React Router v7)
-- **Styling**: Vanilla CSS + Tailwind (Modern Glassmorphism & Neural themes)
-- **AI Engine**: MediaPipe Pose Landmarker (33 keypoints, 30+ FPS client-side)
-- **Real-time DB**: Firebase Firestore (Real-time sync enabled)
-- **Auth**: Firebase Authentication (Multi-role support)
-- **Analytics**: Recharts (Clinical trend visualization)
-- **Offline**: Service Workers + LocalStorage sync architecture
-- **Icons**: Lucide React (Premium stroke set)
+- **Frontend**: React 19.2.0 + Vite (High-performance rendering)
+- **Routing**: React Router v7 (Centralized route configuration)
+- **Styling**: CSS Modules + Custom Styling (Modern UI components)
+- **AI Engine**: Google Generative AI (Gemini Flash for ingredient insights)
+- **Real-time DB**: Appwrite (Real-time chat and community features)
+- **Maps**: Leaflet + leaflet.heat (Interactive disease heatmap)
+- **PDF Generation**: @react-pdf/renderer (Diet plan PDFs)
+- **State Management**: React Hooks + Zustand (Global state management)
+- **Icons**: Custom SVG and Unicode icons
 
-## 📁 Optimized Project Structure
+## 📁 Project Structure
 
-The project follows a scalable **Feature-Based Architecture**:
+The project follows a scalable **Component-Based Architecture**:
 
 ```
-src/
-├── app/               # Main entry, global styles, and routing
-├── features/          # Domain-driven feature modules
-│   ├── ai/            # Core MediaPipe engine and feedback logic
-│   ├── auth/          # Login, Registration, and Auth Context
-│   ├── doctor/        # Command Center, Patient Monitoring, Charts
-│   └── patient/       # Nexus Dashboard, Workout Session, Scoring
-├── shared/            # Reusable components (NavHeader, Modals)
-├── lib/               # Third-party configurations (Firebase)
-└── utils/             # Global utility functions
+d:\dietiq\
+├── .env                          # Environment variables
+├── .gitignore
+├── eslint.config.js              # ESLint configuration
+├── index.html                    # Main HTML entry point
+├── package-lock.json
+├── package.json                  # Project dependencies and scripts
+├── README.md                     # Project documentation
+├── vercel.json                   # Vercel deployment configuration
+├── vite.config.js                # Vite build configuration
+├── public/                       # Static assets
+│   └── data/                     # JSON data files for heatmap and other features
+└── src/                          # Source code
+    ├── App.css                   # Global application styles
+    ├── App.jsx                   # Main application router
+    ├── index.css                 # Base styles
+    ├── main.jsx                  # Application entry point
+    ├── assets/                   # Images, icons, and media files
+    ├── components/               # Reusable UI components
+    ├── constants/                # Constant values and configuration
+    ├── data/                     # Static data files (disease information)
+    ├── layouts/                  # Layout wrappers (e.g., Navbar)
+    └── pages/                    # Feature-specific pages
+        ├── About.jsx             # About page
+        ├── Content.jsx           # Disease information content
+        ├── Faq.jsx               # Frequently asked questions
+        ├── Join.jsx              # Authentication page
+        ├── Landing.jsx           # Landing page
+        └── home/                 # Home page features
+            ├── Chat.jsx          # Community health network
+            ├── DietGen.jsx       # Diet plan generator
+            ├── HeatMap.jsx       # Disease heatmap
+            ├── Home.jsx          # Home page
+            ├── Insight.jsx       # Ingredient insights
+            └── Trivia.jsx        # Health trivia quiz
 ```
 
 ## 🛠️ Setup Instructions
@@ -44,53 +69,75 @@ src/
 npm install
 ```
 
-### 2. Run Development Server
+### 2. Environment Configuration
+Create a `.env` file in the root directory with the following variables:
+```env
+VITE_APPWRITE_PROJECT_ID = "your_appwrite_project_id"
+VITE_APPWRITE_ENDPOINT = "https://your_appwrite_endpoint/v1"
+VITE_APPWRITE_DATABASE_ID = "your_database_id"
+VITE_APPWRITE_COLLECTION_ID = "comments"
+VITE_GEMINI_API_KEY = "your_gemini_api_key"
+```
+
+### 3. Run Development Server
 ```bash
 npm run dev
 ```
 The app will open at `http://localhost:5173`
 
-### 3. Build & Deploy
+### 4. Build & Deploy
 ```bash
 npm run build
-firebase deploy
 ```
 
 ## 🌟 Key Features
 
-### For Patients (The Nexus)
-- **Real-time AI Coach**: 33-point pose tracking with instant voice and visual feedback.
-- **Precision Scoring**: Advanced Form Quality Score (0-100) based on symmetry and accuracy.
-- **ROM Tracking**: Automatic Range of Motion measurement for clinical progress.
-- **Recovery Roadmap**: Visual daily routine tracking with streak mechanics.
-- **Neural Settings**: Personalized motion feedback and audio cues.
+### Community Health Network
+- **Public Discussions**: Platform for health-related topic discussions
+- **Expert Verification**: Medical professionals verify community posts
+- **Real-time Insights**: Extracts disease and location insights from discussions
+- **Voting System**: Community can upvote/downvote posts
 
-### For Doctors (Command Center)
-- **Patient Directory**: Real-time status monitoring for all patients.
-- **Clinical Analytics**: Interactive charts for Adherence, ROM Trends, and Form Quality.
-- **Neural Chat**: AI-powered assistant for analyzing patient data and suggesting adjustments.
-- **Direct Assignment**: Remote session configuration and routine management.
+### Disease HeatMap
+- **AI Analysis**: Analyzes community health conversations to detect early signs of regional disease outbreaks
+- **Interactive Map**: Displays disease prevalence with intensity indicators
+- **Detailed Information**: Shows explanations and health tips for each location
+
+### Health Awareness Trivia
+- **Educational Quizzes**: Structured health quizzes on hygiene, medicines, preventive care
+- **Multiple Topics**: Covers various health aspects in general knowledge format
+- **Progress Tracking**: Shows score and review of answers
+
+### Adaptive Diet Plan Generator
+- **Personalized Calculations**: Uses BMR and activity level to determine calorie needs
+- **Macro Distribution**: Balanced protein, carbohydrate, and fat distribution
+- **Diet Preferences**: Supports vegetarian, non-vegetarian, and vegan diets
+- **PDF Export**: Generates 7-day meal plans in PDF format
+
+### Ingredient Insight
+- **AI-Powered Analysis**: Explains food ingredients and their properties
+- **Safety Information**: Identifies natural/artificial ingredients and risk levels
+- **Health Impact**: Provides information on who should limit or avoid ingredients
 
 ## 🔒 Security & Privacy
-- **Clinical-Grade Encryption**: All recovery data is sequestered and only accessible by authorized clinicians.
-- **Real-time Sync**: State-of-the-art synchronization ensures trainers see progress the moment it happens.
-- **HIPAA-Ready Architecture**: Data structures designed for medical confidentiality.
+- **Secure API Keys**: Environment variables protect sensitive API keys
+- **Appwrite Integration**: Secure real-time database with permission controls
+- **Privacy Focused**: No personal health data stored unnecessarily
 
-## 🔐 Persona Credentials
-
-| Role | Email | Password |
-|------|-------|----------|
-| **Doctor** | `doctor@demo.com` | `Demo123!` |
-| **Patient** | `rajesh@demo.com` | `Demo123!` |
-
+## 🌍 Accessibility Features
+- **Multilingual Support**: Designed for regional language adaptation
+- **Simple Interface**: Easy-to-use interface for users with varying digital literacy
+- **Community Driven**: Incorporates local health practices and knowledge
 
 ## ✅ Implementation Status
-- [x] **MediaPipe Core**: 30FPS real-time pose landmarker.
-- [x] **Neural Dashboard**: Fluid, premium glassmorphism UI.
-- [x] **Real-time Sync**: Firestore snapshot listeners integrated.
-- [x] **Form Scoring**: Multi-vector quality assessment algorithm.
-- [x] **PWA Ready**: Full offline capability and installability.
+- [x] **Community Chat**: Real-time health discussion forum with expert verification
+- [x] **Disease Heatmap**: Interactive map showing disease outbreak patterns
+- [x] **Health Trivia**: Educational quiz system for health awareness
+- [x] **Diet Generator**: Personalized diet planning with PDF export
+- [x] **Ingredient Insights**: AI-powered ingredient safety checker
+- [x] **Disease Education**: Comprehensive database of common diseases
+- [x] **Responsive UI**: Mobile-friendly interface for diverse users
 
 ---
 
-**Built with ❤️ by Heal-gorithms for the future of digital rehabilitation**
+**Built with ❤️ by Health Innovators for the future of community health education**
