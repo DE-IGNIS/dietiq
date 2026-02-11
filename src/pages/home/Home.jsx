@@ -15,8 +15,8 @@ function Home() {
           </h1>
 
           <p>
-            HealthIQ helps communities access reliable health and nutrition
-            guidance through intelligent, multilingual technology.
+            HealthIQ empowers communities with reliable, personalized health and nutrition 
+            guidance through intelligent, accessible technology.
           </p>
         </div>
 

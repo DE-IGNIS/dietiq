@@ -3,84 +3,88 @@ import "./styling/About.css";
 function About() {
   return (
     <div className="about-wrapper">
+      {/* HERO */}
       <section className="about-hero">
         <h1>About HealthIQ</h1>
         <p>
-          Making community health accessible through AI, trust, and inclusive
-          technology.
+          A smart health platform combining community discussions, AI tools,
+          and practical health utilities — all in one place.
         </p>
       </section>
 
+      {/* WHAT WE OFFER */}
       <section className="about-section">
-        <h2>The Problem</h2>
+        <h2>What We Offer</h2>
 
         <div className="about-cards">
           <div className="about-card">
-            <h3>Misinformation</h3>
+            <h3>Community Chat System</h3>
             <p>
-              Health advice online is often unverified, confusing, or
-              misleading.
+              Discuss health topics, share experiences, and view expert-verified
+              insights. Upvote useful advice and filter by category.
             </p>
           </div>
 
           <div className="about-card">
-            <h3>Language Barriers</h3>
-            <p>Most platforms fail to support regional and native languages.</p>
+            <h3>Disease Outbreak Heatmap</h3>
+            <p>
+              Visualize regional disease trends and identify outbreak intensity
+              through interactive heat-based mapping.
+            </p>
           </div>
 
           <div className="about-card">
-            <h3>Limited Access</h3>
+            <h3>Health Awareness Trivia</h3>
             <p>
-              Rural and semi-urban communities lack timely, reliable guidance.
+              Improve your knowledge with structured quizzes focused on hygiene,
+              prevention, medicine, and general wellness.
+            </p>
+          </div>
+
+          <div className="about-card">
+            <h3>Ingredient Safety Checker</h3>
+            <p>
+              Search any food ingredient to understand what it is, whether it’s
+              natural or artificial, and its potential risk level.
+            </p>
+          </div>
+
+          <div className="about-card">
+            <h3>Adaptive Diet Planner</h3>
+            <p>
+              Generate personalized diet suggestions based on health goals and
+              nutritional balance.
             </p>
           </div>
         </div>
       </section>
 
+      {/* HOW IT WORKS */}
       <section className="about-section light">
-        <h2>Why HealthIQ</h2>
+        <h2>How HealthIQ Works</h2>
         <p className="about-text">
-          Access to health information should not depend on geography, language,
-          or digital literacy. HealthIQ was created to bridge this gap by
-          combining artificial intelligence with community-driven insights —
-          making health guidance more relevant, inclusive, and trustworthy.
+          HealthIQ combines real-time community interaction with intelligent
+          health tools. Users can engage in discussions, explore outbreak data,
+          test their knowledge, analyze food ingredients, and generate diet
+          plans — all within a single integrated platform.
         </p>
       </section>
 
-      <section className="about-section">
-        <h2>How It Works</h2>
-
-        <div className="about-cards">
-          <div className="about-card">
-            <h3>AI Intelligence</h3>
-            <p>Personalized health insights powered by responsible AI.</p>
-          </div>
-
-          <div className="about-card">
-            <h3>Community Input</h3>
-            <p>Local experiences enhance accuracy and cultural relevance.</p>
-          </div>
-
-          <div className="about-card">
-            <h3>Multilingual Access</h3>
-            <p>Simple, understandable guidance in regional languages.</p>
-          </div>
-        </div>
-      </section>
-
+      {/* OUR PURPOSE */}
       <section className="about-section vision">
-        <h2>Our Vision</h2>
+        <h2>Our Purpose</h2>
         <p className="about-text">
-          A future where access to health knowledge is universal independent of
-          location, income, or language.
+          To make reliable health information interactive, accessible, and
+          actionable — not just readable.
         </p>
       </section>
 
+      {/* CONTACT */}
       <section className="about-section contact">
         <h2>Need Help or Have Questions?</h2>
 
         <p className="about-text">
-          For further assistance or inquiries, feel free to reach out to us at
+          For assistance or support, contact us at:
           <br />
           <a href="mailto:support@HealthIQ.ai" className="about-mail">
             support@HealthIQ.ai
@@ -99,8 +103,8 @@ function About() {
           </div>
 
           <div className="contact-box">
-            <h3 className="contact-pill">Contact Us</h3>
-            <p>For further assistance, please reach out to our support team.</p>
+            <h3>Platform</h3>
+            <p>AI-powered community health system</p>
           </div>
         </div>
       </section>

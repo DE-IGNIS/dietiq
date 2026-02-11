@@ -15,11 +15,11 @@ function Landing() {
             <h3>HealthIQ</h3>
           </div>
 
-          <h2>Health Care by Community & AI</h2>
+          <h2>AI-Driven Community Health Intelligence</h2>
 
           <p>
-            AI-driven, multilingual health intelligence
-            for inclusive care.
+            Delivering reliable health and nutrition guidance 
+            with smart, accessible technology.
           </p>
         </div>
 
@@ -37,15 +37,16 @@ function Landing() {
         <div className="content-left">
           <h2>Community Health, Powered by AI</h2>
           <p>
-            Access to reliable health and nutrition guidance remains a major
-            challenge in semi-urban and rural communities. Misinformation,
-            language barriers, low digital literacy, and lack of localized
-            support often prevent timely health decisions. As a result,
-            preventable health issues, poor nutrition, and sanitation-related
-            risks continue to impact community well-being.
+            Access to reliable health and nutrition guidance remains a major challenge in many semi-urban 
+            and rural communities. Information is often scattered across unreliable sources, mixed with 
+            misinformation, and presented in ways that are difficult for people with low digital literacy 
+            to understand. The lack of localized, culturally relevant guidance further prevents individuals 
+            from making timely and informed health decisions. As a result, preventable illnesses, poor nutrition 
+            choices, and sanitation-related risks continue to affect overall community well-being.
             <br /><br />
-            HealthIQ addresses this gap by combining artificial intelligence,
-            community knowledge, and multilingual accessibility.
+            HealthIQ addresses this gap by bringing together artificial intelligence, structured community knowledge, 
+            and accessible digital tools. It creates a trusted platform where people can learn, share, and verify health 
+            information while receiving personalized guidance that aligns with their local food habits and lifestyle.
           </p>
         </div>
 

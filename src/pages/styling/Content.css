@@ -25,9 +25,7 @@ body {
   font-size: 16px;
 }
 
-/* ================================
-   HEADING ANIMATION
-================================ */
+
 .heading-wrapper {
   margin-bottom: 30px;
   overflow: hidden;
@@ -49,7 +47,7 @@ body {
   transition: letter-spacing 0.3s ease;
 }
 
-/* Animated underline */
+
 .heading-line {
   width: 0;
   height: 4px;
@@ -60,7 +58,7 @@ body {
   animation-delay: 0.6s;
 }
 
-/* Subtitle animation */
+
 .animated-subtitle {
   opacity: 0;
   transform: translateY(10px);
@@ -68,9 +66,7 @@ body {
   animation-delay: 1.2s;
 }
 
-/* ================================
-   SEARCH BAR
-================================ */
+
 .search-container {
   position: relative;
   max-width: 480px;
@@ -116,18 +112,14 @@ body {
   font-size: 15px;
 }
 
-/* ================================
-   GRID (4 x 8 DESKTOP FIRST)
-================================ */
+
 .grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 26px;
 }
 
-/* ================================
-   CARD STYLES
-================================ */
+
 .card {
   background: #ffffff;
   border-radius: 20px;
@@ -153,9 +145,7 @@ body {
   transform: scale(1.1);
 }
 
-/* ================================
-   CARD CONTENT
-================================ */
+
 .card-body {
   padding: 18px;
 }
@@ -172,9 +162,7 @@ body {
   color: #666;
 }
 
-/* ================================
-   TAG / CATEGORY
-================================ */
+
 .tag {
   display: inline-block;
   font-size: 12px;
@@ -184,36 +172,32 @@ body {
   color: #ffffff;
   font-weight: 500;
 }
-/* ================================
-   TAG COLORS
-================================ */
+
 
 .tag-chronic {
-  background: #2563eb; /* blue */
+  background: #2563eb; 
 }
 
 .tag-viral {
-  background: #dc2626; /* red */
+  background: #dc2626; 
 }
 
 .tag-bacterial {
-  background: #16a34a; /* green */
+  background: #16a34a; 
 }
 
 .tag-vector-borne {
-  background: #f97316; /* orange */
+  background: #f97316; 
 }
 
 .tag-lifestyle {
-  background: #f59e0b; /* amber */
+  background: #f59e0b; 
 }
 
 .tag-mental {
-  background: #7c3aed; /* purple */
+  background: #7c3aed; 
 }
-/* ================================
-   MODAL OVERLAY
-================================ */
+
 .modal {
   position: fixed;
   inset: 0;
@@ -225,9 +209,7 @@ body {
   z-index: 1000;
 }
 
-/* ================================
-   MODAL CONTAINER
-================================ */
+
 .modal-box {
   width: 1000px;
   max-height: 88vh;
@@ -238,9 +220,7 @@ body {
   animation: modalEnter 0.45s ease;
 }
 
-/* ================================
-   MODAL HERO
-================================ */
+
 .modal-hero {
   height: 260px;
   padding: 40px;
@@ -257,9 +237,7 @@ body {
   font-weight: 700;
 }
 
-/* ================================
-   MODAL TAG
-================================ */
+
 .modal-tag {
   display: inline-block;
   width: fit-content;
@@ -270,9 +248,7 @@ body {
   background: rgba(0, 0, 0, 0.55);
 }
 
-/* ================================
-   MODAL CONTENT
-================================ */
+
 .modal-content {
   padding: 35px;
 }
