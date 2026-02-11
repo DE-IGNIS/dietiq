@@ -1,4 +1,4 @@
-# Gati Rehab App - AI-Powered Virtual Rehabilitation Assistant
+# HealthIQ - AI-Powered Virtual Rehabilitation Assistant
 
 A premium Progressive Web Application (PWA) for remote physical therapy using state-of-the-art AI-powered pose detection and real-time clinical monitoring.
 
